@@ -5,7 +5,7 @@ import Cors from 'cors'
 
 // app config
 const app = express();
-const port = process.env.port || 8001
+const port = process.env.PORT || 8001
 const connectionUrl = "mongodb+srv://admin:adminpw@cluster0.qb3di.mongodb.net/tinderDB?retryWrites=true&w=majority"
 //mongodb+srv://admin:<password>@cluster0.qb3di.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 
