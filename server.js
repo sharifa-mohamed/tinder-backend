@@ -6,17 +6,18 @@ import Cors from 'cors'
 // app config
 const app = express();
 const port = process.env.PORT || 8001
-const connectionUrl = "mongodb+srv://admin:adminpw@cluster0.qb3di.mongodb.net/tinderDB?retryWrites=true&w=majority"
+const connectionUrl = "mongodb+srv://admin:9R31I3GuwO0JqGxw@cluster0.dtgxq.mongodb.net/tinderDB?retryWrites=true&w=majority"
+//"mongodb+srv://admin:adminpw@cluster0.qb3di.mongodb.net/tinderDB?retryWrites=true&w=majority"
 //mongodb+srv://admin:<password>@cluster0.qb3di.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 
 //middleware
 app.use(express.json());
-app.use(Cors());
+app.use(Cors()); //cors for adding  headers
 
 //dbConfig
 mongoose.connect(connectionUrl, {
     useNewUrlParser: true,
-    //useCreateIndex: true,
+    //useCreateIndex: true, 
     useUnifiedTopology: true
 })
 // api endpoints
